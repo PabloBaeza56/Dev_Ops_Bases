@@ -19,7 +19,11 @@ jobs:
       run: docker build . -t pabloten56/test-api
     - name: Push the Docker image (to Docker Hub)
       run: docker push pabloten56/test-api
-    - name: Push the Docker image (to Render Host)
-      run: echo ${{ secrets.DOCKER_RENDER_DEPLOY }}
     
+    - name: Push the Docker image (to Render Host)
+      uses: fjogeleit/http-request-action@v1.14.0
+      with:
+        url: ${{ secrets.DOCKER_RENDER_DEPLOY }}
+        method: 'GET'
+
 
