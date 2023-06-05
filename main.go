@@ -8,7 +8,7 @@ import (
 
 func main() {
 	e := echo.New()
-	.GET("/ping", func(c echo.Context) error {
+	e.GET("/ping", func(c echo.Context) error {
 		return c.String(http.StatusOK, "POoofffNG!")
 	})
 	e.Logger.Fatal(e.Start(":1323"))
