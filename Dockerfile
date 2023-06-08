@@ -8,6 +8,6 @@ COPY . .
 # Set OS as linux
 RUN GOOS=linux go build -o /go/bin/api main.go
 
-FROM alpine
+FROM alpine:latest
 COPY --from=build /go/bin/api /go/bin/api
 ENTRYPOINT ["go/bin/api"]
