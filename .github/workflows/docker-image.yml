@@ -12,14 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-  
     - name: Login the Docker image
       run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
     - name: Build the Docker image
       run: docker build . -t pabloten56/test-api
     - name: Push the Docker image (to Docker Hub)
       run: docker push pabloten56/test-api
-    
     - name: Push the Docker image (to Render Host)
       uses: fjogeleit/http-request-action@v1.14.0
       with:
