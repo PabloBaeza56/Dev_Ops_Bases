@@ -1,0 +1,19 @@
+name: CODECOV TEST
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+permissions: read-all
+jobs:
+  Deploy_image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: codecov/codecov-action@v3
+      env: 
+       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Upload coverage reports to Codecov
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+
