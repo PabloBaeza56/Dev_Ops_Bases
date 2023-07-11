@@ -18,9 +18,9 @@ jobs:
             repo: context.repo.repo,
             body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
-    - name: Add issue to project board
-      uses: technote-space/create-project-card-action@v1
+    - name: Create or Update Project Card
+      uses: peter-evans/create-or-update-project-card@v2
       with:
-          PROJECT: test-silver-river
-          COLUMN: Todo
+        project-name: TEST SILVER RIVER
+        column-name: Todo
  
