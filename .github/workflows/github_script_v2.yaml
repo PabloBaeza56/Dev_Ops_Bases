@@ -21,6 +21,6 @@ jobs:
     - name: Add issue to project board
       uses: technote-space/create-project-card-action@v1
       with:
-          PROJECT: TEST SILVER RIVER
+          PROJECT: test-silver-river
           COLUMN: Todo
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+ 
