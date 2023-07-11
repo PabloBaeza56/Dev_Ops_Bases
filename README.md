@@ -9,6 +9,8 @@
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=PabloBaeza56_test-silver-river)](https://sonarcloud.io/summary/new_code?id=PabloBaeza56_test-silver-river)
 
 
-test 2
+https://learn.microsoft.com/es-es/training/modules/github-actions-cd/2-deploy-azure
+https://learn.microsoft.com/es-es/training/modules/github-actions-cd/3-create-workflow-deploy-azure
+
 
 
