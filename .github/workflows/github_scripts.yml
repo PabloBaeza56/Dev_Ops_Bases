@@ -5,6 +5,7 @@ on:
     types: [opened]
 jobs:
   comment:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@0.8.0
