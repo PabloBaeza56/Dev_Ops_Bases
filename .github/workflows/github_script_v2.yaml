@@ -18,10 +18,11 @@ jobs:
             repo: context.repo.repo,
             body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
-    - name: Create or Update Project Card
-      uses: peter-evans/create-or-update-project-card@v2
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        project-name: TEST SILVER RIVER
-        column-name: Todo
- 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ineshbose/project-card-action@v1
+        with:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          TARGET_COLUMN: 'Todo'
