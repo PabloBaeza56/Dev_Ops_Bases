@@ -27,10 +27,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASS }}
 
     - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v4
       with:
         push: true
-        tags: index.docker.io/${{ secrets.DOCKER_USER }}/pabloten56/test-api:${{ github.sha }}
+        tags: pabloten56/test-api:latest
         file: ./Dockerfile
 
   deploy:
