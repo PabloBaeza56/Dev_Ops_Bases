@@ -48,4 +48,4 @@ jobs:
         app-name: 'test-silver-river-definitive'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_edc0dace96a5452fbfd1042308fed98d }}
-        images: 'index.docker.io/pabloten56/test-api:latest'
+        images: 'pabloten56/test-api:latest'
