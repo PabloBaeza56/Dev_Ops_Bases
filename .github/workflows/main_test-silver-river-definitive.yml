@@ -33,17 +33,6 @@ jobs:
         tags: pabloten56/test-api:latest
         file: ./Dockerfile
         
-  Deploy_image:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Login the Docker image
-      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
-    - name: Build the Docker image
-      run: docker build . -t pabloten56/test-api
-    - name: Push the Docker image (to Docker Hub)
-      run: docker push pabloten56/test-api
 
   Deploy:
     runs-on: ubuntu-latest
