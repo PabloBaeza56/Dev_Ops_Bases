@@ -7,13 +7,13 @@ import (
 func main() {
 	e := echo.New()
 	e.GET("/ping", func(c echo.Context) error {
-		return c.String(http.StatusOK, "444ppppppp7755555vvvvvxxxxheladommmmmm")
+		return c.String(http.StatusOK, "bbbbbb444ppppppp7755555vvvvvxxxxheladommmmmm")
 	})
 	e.GET("/pong", func(c echo.Context) error {
-		return c.String(http.StatusOK, "444pppppppp7755555vvvvvxxxxxjamonmmmmm")
+		return c.String(http.StatusOK, "bbbbbb444pppppppp7755555vvvvvxxxxxjamonmmmmm")
 	})
 	e.GET("/bum", func(c echo.Context) error {
-		return c.String(http.StatusOK, "444ppppppppp7755555vvvvvxxxxxpizzammmmm")
+		return c.String(http.StatusOK, "bbbbbbb444ppppppppp7755555vvvvvxxxxxpizzammmmm")
 	})
 	e.Logger.Fatal(e.Start(":1323"))
 }
