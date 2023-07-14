@@ -23,6 +23,6 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Test-silver-river-docker'
-        repository: 'PabloBaeza56/test-silver-river'
+        repository: 'pabloten56/test-api'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
