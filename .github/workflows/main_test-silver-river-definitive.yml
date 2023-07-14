@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         push: true
-        tags: pabloten56/test-api
+        tags: pabloten56/test-api:latest
         file: ./Dockerfile
         
   Deploy_image:
@@ -44,7 +44,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t pabloten56/test-api
     - name: Push the Docker image (to Docker Hub)
-      run: docker push pabloten56/test-api
+      run: docker push pabloten56/test-api:latest
 
   Deploy:
     runs-on: ubuntu-latest
@@ -61,4 +61,4 @@ jobs:
         app-name: 'test-silver-river-definitive'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_edc0dace96a5452fbfd1042308fed98d }}
-        images: 'pabloten56/test-api'
+        images: 'pabloten56/test-api:latest'
