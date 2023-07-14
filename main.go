@@ -7,13 +7,13 @@ import (
 func main() {
 	e := echo.New()
 	e.GET("/ping", func(c echo.Context) error {
-		return c.String(http.StatusOK, "xxxxhelado")
+		return c.String(http.StatusOK, "xxxxheladommmmmm")
 	})
 	e.GET("/pong", func(c echo.Context) error {
-		return c.String(http.StatusOK, "xxxxxjamon")
+		return c.String(http.StatusOK, "xxxxxjamonmmmmm")
 	})
 	e.GET("/bum", func(c echo.Context) error {
-		return c.String(http.StatusOK, "xxxxxpizza")
+		return c.String(http.StatusOK, "xxxxxpizzammmmm")
 	})
 	e.Logger.Fatal(e.Start(":1323"))
 }
