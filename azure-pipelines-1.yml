@@ -13,8 +13,8 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Iniciar servicio
-  displayName: Iniciar servicio
+- stage: Iniciar_servicio
+  displayName: Iniciar_servicio
   jobs:
   - job: Build
     displayName: Build
