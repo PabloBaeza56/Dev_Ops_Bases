@@ -1,0 +1,29 @@
+# Docker
+
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- main
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Iniciar servicio
+  displayName: Iniciar servicio
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    
+    - task: AzureAppServiceManage@0
+      inputs:
+        azureSubscription: 'Azure for Students (8d06987a-0340-408a-b520-8093e505a53e)'
+        Action: 'Start Azure App Service'
+        WebAppName: 'test-silver-river-definitive'
