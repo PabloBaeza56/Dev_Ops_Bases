@@ -22,5 +22,4 @@ jobs:
 
       - name: 'Run az commands'
         run: |
-          az account show
-          az group list
+          az webapp restart --name test-silver-river-definitive --resource-group test-silver-river-definitive_group
