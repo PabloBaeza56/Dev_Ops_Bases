@@ -14,11 +14,5 @@ https://learn.microsoft.com/es-es/training/modules/github-actions-cd/3-create-wo
 
 
 
-TEST B
 
-TEST A
-
-AAAAAAAAAAAAAAA
-
-BBBBBBBBBBBBBBB
 
