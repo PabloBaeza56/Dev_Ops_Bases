@@ -25,7 +25,7 @@ steps:
       
       git config --global user.username "PabloBaeza56"
 
-      git checkout master
+      git checkout main
 
       git add --all
 
